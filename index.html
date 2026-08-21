@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunera - O maior catálogo de links para filmes completos no Youtube.</title>
+    <meta name="description"
+        content="Assista a centenas de filmes completos, dublados e legendados agregados diretamente do YouTube. Acesso rápido, organizado e sem cadastro obrigatório.">
+    <meta name="keywords"
+        content="filmes completos, filmes dublados, filmes gratis, youtube filmes, assistir filmes online, cinema gratis, filmes completos youtube, lunera">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Lunera">
+    <meta name="theme-color" content="#0a0d14">
+
+    <!-- URL Canônica — substitua pelo domínio real quando publicar -->
+    <link rel="canonical" href="https://www.lunera.com.br/">
+
+    <!-- hreflang — indica ao Google os idiomas disponíveis no site -->
+    <link rel="alternate" hreflang="pt" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="es" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="it" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="fr" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="en" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="tr" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="hi" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="ja" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="zh" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="de" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="ru" href="https://www.lunera.com.br/">
+    <link rel="alternate" hreflang="x-default" href="https://www.lunera.com.br/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lunera.com.br/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Lunera">
+    <meta property="og:title" content="Lunera - O maior catálogo de links para filmes completos no Youtube.">
+    <meta property="og:description"
+        content="Assista a centenas de filmes completos, dublados e legendados agregados diretamente do YouTube. Acesso rápido, organizado e sem cadastro obrigatório.">
+    <meta property="og:image" content="https://www.lunera.com.br/Lunera_Logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.lunera.com.br/">
+    <meta property="twitter:title" content="Lunera - O maior catálogo de links para filmes completos no Youtube.">
+    <meta property="twitter:description"
+        content="Assista a centenas de filmes completos, dublados e legendados agregados diretamente do YouTube. Acesso rápido, organizado e sem cadastro obrigatório.">
+    <meta property="twitter:image" content="https://www.lunera.com.br/Lunera_Logo.png">
+
+    <!-- Structured Data (JSON-LD) — ajuda o Google a entender o site -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Lunera",
+        "url": "https://www.lunera.com.br/",
+        "description": "Portal de filmes completos, dublados e legendados agregados do YouTube.",
+        "inLanguage": ["pt-BR", "es", "it", "fr", "en", "tr", "hi", "ja", "zh", "de", "ru"],
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.lunera.com.br/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Lunera",
+            "url": "https://www.lunera.com.br/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.lunera.com.br/Lunera_Logo.png"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "luneramv@proton.me",
+                "contactType": "customer support"
+            }
+        }
+    }
+    </script>
+
+    <!-- Google Fonts: Outfit for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <!-- Top row: logo + actions -->
+            <div class="header-top-row">
+                <div class="header-branding">
+                    <div class="logo">
+                        <img src="Lunera_Logo.png" alt="Lunera Logo" class="logo-image">
+                        <h1>LUNERA</h1>
+                    </div>
+                    <p class="subtitle" data-i18n="subtitle">O maior catálogo de filmes completos e dublados do YouTube
+                        reunidos em um só
+                        lugar</p>
+                </div>
+                <div class="header-actions">
+                    <div class="language-selector" id="languageSelector">
+                        <button class="flag-btn active" data-lang="pt" title="Português">
+                            <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="720" height="504" fill="#009739" />
+                                <polygon points="360,40 680,252 360,464 40,252" fill="#FEDF00" />
+                                <circle cx="360" cy="252" r="116" fill="#002776" />
+                                <path d="M244,252 a116,116 0 0,1 232,0" fill="none" stroke="#fff" stroke-width="18" />
+                                <text x="360" y="268" text-anchor="middle" font-size="52" font-family="Arial"
+                                    fill="#fff" font-weight="bold" letter-spacing="4">BRASIL</text>
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="es" title="Español">
+                            <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="3" height="0.5" fill="#C60B1E" />
+                                <rect y="0.5" width="3" height="1" fill="#F1BF00" />
+                                <rect y="1.5" width="3" height="0.5" fill="#C60B1E" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="it" title="Italiano">
+                            <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="1" height="2" fill="#008C45" />
+                                <rect x="1" width="1" height="2" fill="#F4F5F0" />
+                                <rect x="2" width="1" height="2" fill="#CD212A" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="fr" title="Français">
+                            <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="1" height="2" fill="#00209F" />
+                                <rect x="1" width="1" height="2" fill="#FFF" />
+                                <rect x="2" width="1" height="2" fill="#F6424D" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="en" title="English">
+                            <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="30" fill="#012169" />
+                                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+                                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" />
+                                <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10" />
+                                <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="tr" title="Türkçe">
+                            <svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="20" fill="#E30A17" />
+                                <circle cx="11" cy="10" r="6" fill="#fff" />
+                                <circle cx="13" cy="10" r="4.5" fill="#E30A17" />
+                                <polygon points="17.5,10 19.5,8.5 19.5,11.5" fill="#fff" />
+                                <polygon points="19,10 21.5,8 21.5,12" fill="#fff" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="hi" title="हिन्दी">
+                            <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="3" height="0.667" fill="#FF9933" />
+                                <rect y="0.667" width="3" height="0.667" fill="#FFFFFF" />
+                                <rect y="1.333" width="3" height="0.667" fill="#138808" />
+                                <circle cx="1.5" cy="1" r="0.22" fill="#000088" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="ja" title="日本語">
+                            <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="3" height="2" fill="#FFFFFF" />
+                                <circle cx="1.5" cy="1" r="0.6" fill="#BC002D" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="zh" title="中文">
+                            <svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="20" fill="#DE2910" />
+                                <polygon points="5,3 6,6 9,6 6.5,8 7.5,11 5,9 2.5,11 3.5,8 1,6 4,6" fill="#FFDE00" />
+                                <polygon points="10,2 10.6,3 11.7,3 10.8,3.7 11.1,4.7 10,4 8.9,4.7 9.2,3.7 8.3,3 9.4,3"
+                                    fill="#FFDE00" />
+                                <polygon
+                                    points="13,4.5 13.6,5.5 14.7,5.5 13.8,6.2 14.1,7.2 13,6.5 11.9,7.2 12.2,6.2 11.3,5.5 12.4,5.5"
+                                    fill="#FFDE00" />
+                                <polygon
+                                    points="13,8.5 13.6,9.5 14.7,9.5 13.8,10.2 14.1,11.2 13,10.5 11.9,11.2 12.2,10.2 11.3,9.5 12.4,9.5"
+                                    fill="#FFDE00" />
+                                <polygon
+                                    points="10,11 10.6,12 11.7,12 10.8,12.7 11.1,13.7 10,13 8.9,13.7 9.2,12.7 8.3,12 9.4,12"
+                                    fill="#FFDE00" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="de" title="Deutsch">
+                            <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="3" height="0.667" fill="#000000" />
+                                <rect y="0.667" width="3" height="0.667" fill="#DD0000" />
+                                <rect y="1.333" width="3" height="0.667" fill="#FFCE00" />
+                            </svg>
+                        </button>
+                        <button class="flag-btn" data-lang="ru" title="Русский">
+                            <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="3" height="0.667" fill="#FFFFFF" />
+                                <rect y="0.667" width="3" height="0.667" fill="#0039A6" />
+                                <rect y="1.333" width="3" height="0.667" fill="#D52B1E" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="user-auth-section" id="userAuthSection">
+                        <button id="btnOpenAuth" class="btn-auth" data-i18n="btn_auth"><i
+                                class="fa-regular fa-user"></i>
+                            Entrar / Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom row: cc info tip -->
+            <div class="cc-info">
+                <i class="fa-solid fa-closed-captioning cc-icon"></i>
+                <span data-i18n="cc_info"><strong>Filmes estrangeiros?</strong> Ative as legendas (CC) no player e mude
+                    para a tradução automática no seu idioma preferido na engrenagem <i class="fa-solid fa-gear"></i> do
+                    vídeo. O
+                    cadastro não é obrigatório, ele existe para que você possa criar a sua playlist. Se gostou, divulgue
+                    por favor! Queremos apresentar muito mais conteúdo pra você, mas precisamos da sua ajuda. Faça uma
+                    doação no valor de US$1,00.</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout wrapper: ad esquerdo + conteúdo + ad direito -->
+    <div class="page-layout">
+
+        <!-- Anúncio lateral esquerdo -->
+        <aside class="ad-sidebar ad-sidebar-left">
+            <div class="ad-placeholder">
+                <span class="ad-label">Anúncio</span>
+                <div class="ad-mock-content">
+                    <div class="ad-mock-icon">📢</div>
+                    <div class="ad-mock-text">Google Ads</div>
+                    <div class="ad-mock-size">300 × 600</div>
+                    <div class="ad-mock-desc">Wide Skyscraper</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="app-main">
+            <!-- Hero section containing the active player and info -->
+            <section class="player-section" id="playerSection">
+                <div class="player-container">
+                    <div class="video-wrapper">
+                        <iframe id="mainPlayer" src="" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <!-- Initial Placeholder overlay before first video loads -->
+                        <div id="playerPlaceholder" class="player-placeholder">
+                            <i class="fa-solid fa-ticket placeholder-icon" style="color: #ff3c00;"></i>
+                            <h3 data-i18n="placeholder_title">Nenhum filme selecionado</h3>
+                            <p data-i18n="placeholder_desc">Selecione um filme abaixo para começar a assistir</p>
+                        </div>
+                    </div>
+                    <div class="video-info-box">
+                        <div class="live-indicator-badge"
+                            style="background: linear-gradient(135deg, #ff3c00, #ff0055);">
+                            <i class="fa-solid fa-circle-play"></i> <span data-i18n="now_playing">REPRODUZINDO
+                                AGORA</span>
+                        </div>
+                        <h2 id="activeVideoTitle" class="active-video-title" data-i18n="loading_movies">Carregando
+                            filmes...
+                        </h2>
+                        <div class="active-video-meta">
+                            <span id="activeVideoChannel" class="channel-name"><i class="fa-regular fa-user"></i> <span
+                                    data-i18n="meta_channel">Canal</span></span>
+                            <span id="activeVideoViewers" class="viewer-count"><i class="fa-regular fa-clock"></i> <span
+                                    data-i18n="meta_duration">Duração</span></span>
+                            <button id="btnTogglePlaylist" class="btn-toggle-playlist"
+                                title="Salvar para assistir depois" data-i18n-title="btn_toggle_playlist_title">
+                                <i class="fa-regular fa-bookmark"></i> <span data-i18n="btn_add_playlist">Adicionar à
+                                    Playlist</span>
+                            </button>
+                            <button id="btnCastTV" class="btn-cast-tv" title="Transmitir para a TV"
+                                data-i18n-title="btn_cast_tv_title">
+                                <i class="fa-solid fa-tv"></i> <span data-i18n="btn_cast_tv">Assistir na TV</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Controls section: search and filters -->
+            <section class="controls-section">
+                <div class="controls-top-row">
+                    <div class="search-bar-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder"
+                            placeholder="Pesquisar por título, gênero, canal ou palavra-chave...">
+                    </div>
+                    <div class="channel-filter-wrapper">
+                        <select id="channelSelect">
+                            <option value="all" data-i18n="all_channels">Todos os Canais</option>
+                        </select>
+                        <select id="langSortSelect">
+                            <option value="original" data-i18n="sort_original">Ordem Original</option>
+                            <option value="pt" data-i18n="sort_pt">Português (Brasil/Portugal)</option>
+                            <option value="es" data-i18n="sort_es">Espanhol</option>
+                            <option value="en" data-i18n="sort_en">Inglês</option>
+                            <option value="it" data-i18n="sort_it">Italiano</option>
+                            <option value="fr" data-i18n="sort_fr">Francês</option>
+                            <option value="ja" data-i18n="sort_ja">Japonês</option>
+                            <option value="zh" data-i18n="sort_zh">Chinês</option>
+                            <option value="hi" data-i18n="sort_hi">Hindu</option>
+                            <option value="tr" data-i18n="sort_tr">Turco</option>
+                            <option value="ru" data-i18n="sort_ru">Russo</option>
+                            <option value="de" data-i18n="sort_de">Alemão</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filters-container" id="filtersContainer">
+                    <button class="filter-btn active" data-category="all" data-i18n="filter_all">Todos</button>
+                    <button class="filter-btn" data-category="action" data-i18n="filter_action">Ação & Aventura</button>
+                    <button class="filter-btn" data-category="comedy" data-i18n="filter_comedy">Comédia</button>
+                    <button class="filter-btn" data-category="horror" data-i18n="filter_horror">Terror &
+                        Suspense</button>
+                    <button class="filter-btn" data-category="scifi" data-i18n="filter_scifi">Ficção & Fantasia</button>
+                    <button class="filter-btn" data-category="documentary"
+                        data-i18n="filter_documentary">Documentários</button>
+                    <button class="filter-btn" data-category="other" data-i18n="filter_other">Outros Filmes</button>
+                    <button class="filter-btn hidden" id="filterMyList" data-category="mylist"
+                        data-i18n="filter_mylist"><i class="fa-solid fa-bookmark" style="margin-right: 5px;"></i> Minha
+                        Lista</button>
+                </div>
+            </section>
+
+            <!-- Streams list section -->
+            <section class="streams-section">
+                <div class="section-title-wrapper">
+                    <h2>
+                        <span data-i18n="available_movies">Filmes Disponíveis</span>
+                        (<span id="resultsCount">0</span>)
+                        <span class="channels-count-badge">
+                            <i class="fa-solid fa-tv"></i>
+                            <span id="channelsCount">0</span> <span data-i18n="channels_label">canais</span>
+                        </span>
+                    </h2>
+                </div>
+                <div class="streams-grid" id="streamsGrid">
+                    <!-- Stream cards will be loaded here dynamically by JavaScript -->
+                </div>
+                <!-- Pagination Controls -->
+                <div id="pagination" class="pagination-container"></div>
+                <div id="noResults" class="no-results hidden">
+                    <i class="fa-solid fa-film spin-disc" style="animation: none;"></i>
+                    <h3 data-i18n="no_results_title">Nenhum filme encontrado</h3>
+                    <p data-i18n="no_results_desc">Tente buscar por termos diferentes ou selecione outra categoria.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Anúncio lateral direito -->
+        <aside class="ad-sidebar ad-sidebar-right">
+            <div class="ad-placeholder">
+                <span class="ad-label">Anúncio</span>
+                <div class="ad-mock-content">
+                    <div class="ad-mock-icon">📢</div>
+                    <div class="ad-mock-text">Google Ads</div>
+                    <div class="ad-mock-size">300 × 600</div>
+                    <div class="ad-mock-desc">Wide Skyscraper</div>
+                </div>
+            </div>
+        </aside>
+
+    </div><!-- /page-layout -->
+
+    <footer class="app-footer">
+        <div class="footer-container">
+            <!-- Esquerda: copyright + e-mail -->
+            <div class="footer-left">
+                <p data-i18n="footer_copy">&copy; 2026 Lunera. O maior catalogo de links para filmes completos no
+                    Youtube.</p>
+                <p class="footer-email">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span data-i18n="footer_email_label">E-mail para contato, dúvidas, sugestões e elogios:</span>
+                    <a href="mailto:luneramv@proton.me">luneramv@proton.me</a>
+                </p>
+            </div>
+
+            <!-- Centro: contador de visitas -->
+            <div class="footer-center">
+                <div class="visitor-counter">
+                    <i class="fa-solid fa-eye"></i>
+                    <span data-i18n="footer_visitors">Visitas:</span>
+                    <span id="visitorCount" class="visitor-number">—</span>
+                </div>
+            </div>
+
+            <!-- Direita: link YouTube -->
+            <div class="footer-right">
+                <a href="https://www.youtube.com" target="_blank" class="footer-yt-link">
+                    <i class="fa-brands fa-youtube"></i> YouTube
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" id="btnCloseAuth">&times;</button>
+            <div class="modal-tabs">
+                <button class="modal-tab-btn active" id="tabLoginBtn" data-i18n="tab_login">Entrar</button>
+                <button class="modal-tab-btn" id="tabRegisterBtn" data-i18n="tab_register">Cadastrar</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="modal-form">
+                <div class="form-group">
+                    <label for="loginEmail" data-i18n="label_email">E-mail</label>
+                    <input type="email" id="loginEmail" placeholder="seu-email@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword" data-i18n="label_password">Senha</label>
+                    <input type="password" id="loginPassword" data-i18n-placeholder="placeholder_password"
+                        placeholder="Sua senha" required>
+                </div>
+                <div id="loginError" class="auth-error-msg hidden"></div>
+                <button type="submit" class="btn-auth-submit" data-i18n="btn_login_submit">Entrar</button>
+                <p class="forgot-password-link">
+                    <a href="#" id="btnForgotPassword" data-i18n="forgot_password">Esqueci minha senha</a>
+                </p>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="modal-form hidden">
+                <div class="form-group">
+                    <label for="registerEmail" data-i18n="label_email">E-mail</label>
+                    <input type="email" id="registerEmail" placeholder="seu-email@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword" data-i18n="label_password">Senha</label>
+                    <input type="password" id="registerPassword" data-i18n-placeholder="placeholder_min_char"
+                        placeholder="Mínimo 6 caracteres" required minlength="6">
+                </div>
+                <div id="registerError" class="auth-error-msg hidden"></div>
+                <button type="submit" class="btn-auth-submit" data-i18n="btn_register_submit">Cadastrar</button>
+            </form>
+
+            <!-- Forgot Password Form -->
+            <div id="forgotForm" class="modal-form hidden">
+                <p class="forgot-desc" data-i18n="forgot_desc">Digite seu e-mail e enviaremos um link para redefinir sua
+                    senha.</p>
+                <div class="form-group">
+                    <label for="forgotEmail" data-i18n="label_email">E-mail</label>
+                    <input type="email" id="forgotEmail" placeholder="seu-email@exemplo.com">
+                </div>
+                <div id="forgotError" class="auth-error-msg hidden"></div>
+                <div id="forgotSuccess" class="auth-success-msg hidden"></div>
+                <button id="btnSendReset" class="btn-auth-submit" data-i18n="btn_send_reset">Enviar link de
+                    redefinição</button>
+                <p class="forgot-password-link">
+                    <a href="#" id="btnBackToLogin" data-i18n="back_to_login">← Voltar para o login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cast to TV Modal -->
+    <div id="castModal" class="modal-overlay">
+        <div class="modal-container cast-modal-container">
+            <button class="modal-close" id="btnCloseCast">&times;</button>
+            <h3 class="modal-title-cast"><i class="fa-solid fa-tv"></i> <span data-i18n="cast_modal_title">Assistir na
+                    TV</span></h3>
+
+            <div class="cast-options">
+                <!-- Option 1: Mobile App Link / QR Code -->
+                <div class="cast-option-card">
+                    <h4 data-i18n="cast_option_mobile_title">Pelo Celular</h4>
+                    <p data-i18n="cast_option_mobile_desc">Escaneie o QR Code abaixo com a câmera do seu celular para
+                        abrir o filme no aplicativo do YouTube e transmitir diretamente para a TV:</p>
+                    <div class="qr-code-wrapper">
+                        <img id="castQrCode" src="" alt="QR Code">
+                    </div>
+                    <a id="btnOpenInYT" href="#" target="_blank" class="btn-yt-app-link">
+                        <i class="fa-brands fa-youtube"></i> <span data-i18n="btn_open_in_yt">Abrir no App do
+                            YouTube</span>
+                    </a>
+                </div>
+
+                <hr class="cast-divider">
+
+                <!-- Option 2: Browser Cast Instruction -->
+                <div class="cast-option-card">
+                    <h4 data-i18n="cast_option_pc_title">Pelo Computador (Chrome / Edge)</h4>
+                    <p data-i18n="cast_option_pc_desc">Selecione o ícone de transmissão <i
+                            class="fa-solid fa-square-rss"
+                            style="transform: rotate(90deg); color: var(--accent-cyan);"></i> nos controles inferiores
+                        do player (só aparece se a TV estiver ligada no mesmo Wi-Fi).
+                        <br><br><strong>Alternativa:</strong> Clique com o botão direito em qualquer área vazia desta
+                        página e selecione <strong>"Transmitir mídia para dispositivo"</strong> (no Edge) ou
+                        <strong>"Transmitir..."</strong> (no Chrome).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-auth.js"></script>
+    <script src="filmes.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
