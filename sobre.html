@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre / Contato - Lunera</title>
+    <meta name="description" content="Sobre o Lunera e como entrar em contato.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .legal-page {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.7;
+        }
+
+        .legal-page h1 {
+            font-family: var(--font-headings);
+            font-size: 2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--text-primary) 60%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .legal-page h2 {
+            font-family: var(--font-headings);
+            font-size: 1.3rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--accent-cyan);
+        }
+
+        .legal-page p,
+        .legal-page li {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .legal-page a {
+            color: var(--accent-cyan);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent-cyan);
+        }
+
+        .contact-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-box i {
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="header-top-row">
+                <div class="header-branding">
+                    <a href="index.html" style="text-decoration:none;">
+                        <div class="logo">
+                            <img src="Lunera_Logo.png" alt="Lunera Logo" class="logo-image">
+                            <h1>LUNERA</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="legal-page">
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Voltar para o Lunera</a>
+
+        <h1>Sobre o Lunera</h1>
+
+        <p>O Lunera nasceu de uma ideia simples: reunir, em um só lugar, filmes completos que já estão disponíveis
+            publicamente no YouTube — dublados, legendados ou em idioma original — organizados por categoria, canal e
+            idioma, para facilitar a busca de quem gosta de assistir cinema sem complicação.</p>
+
+        <h2>Como funciona</h2>
+        <p>Nosso catálogo é construído a partir de uma varredura periódica de canais públicos do YouTube que publicam
+            filmes completos. Não hospedamos nenhum vídeo — cada filme é reproduzido diretamente do player oficial do
+            YouTube, dentro do próprio canal que o publicou. O Lunera funciona como um índice de busca e organização,
+            facilitando encontrar o que você quer assistir entre centenas de milhares de títulos.</p>
+
+        <h2>Cadastro opcional</h2>
+        <p>Você pode assistir a qualquer filme sem se cadastrar. O cadastro existe apenas para quem quiser salvar uma
+            lista pessoal de favoritos ("Minha Lista"), acessível em qualquer dispositivo.</p>
+
+        <h2>Direitos autorais</h2>
+        <p>Respeitamos os direitos de propriedade intelectual de terceiros. Se você é o titular de direitos de algum
+            conteúdo listado e deseja solicitar a remoção do link, entre em contato conosco.</p>
+
+        <h2>Fale conosco</h2>
+        <div class="contact-box">
+            <i class="fa-regular fa-envelope"></i>
+            <div>
+                <p style="margin-bottom:4px;">Dúvidas, sugestões, elogios ou solicitações de remoção de conteúdo:</p>
+                <a href="mailto:luneramv@proton.me">luneramv@proton.me</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 Lunera. O maior catalogo de links para filmes completos no Youtube.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
