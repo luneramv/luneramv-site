@@ -56,6 +56,9 @@ let currentUser = null;
 let currentUserUID = null;
 let userPlaylists = {};
 let currentLang = localStorage.getItem('lunera_lang') || 'pt';
+// Filtro RÍGIDO por idioma do título (bandeiras do topo). 'all' = mostra a
+// base inteira (como hoje). Independente do idioma do texto do site.
+let currentContentLang = localStorage.getItem('lunera_content_lang') || 'all';
 let currentTotalPages = 1;
 let currentTotalResults = 0;
 let currentTotalAproximado = false;
@@ -1186,21 +1189,20 @@ function applyStaticTranslations() {
 }
 
 // Set language and re-render everything
-function setLanguage(lang) {
+// lang: idioma do TEXTO do site (traduções estáticas).
+// contentLang: idioma usado para FILTRAR os filmes (coluna title_lang no
+// banco). Se omitido, assume o mesmo valor de lang (comportamento das 11
+// bandeiras de idioma). A bandeira da ONU passa contentLang = 'all'.
+function setLanguage(lang, contentLang) {
     // Validate: only accept known languages
     if (!translations[lang]) return;
 
     currentLang = lang;
     localStorage.setItem('lunera_lang', lang);
-    
+
     // Update <html lang> attribute for accessibility
     document.documentElement.lang = lang;
 
-    // Update flag button active states
-    document.querySelectorAll('.flag-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-    
     // Apply static translations
     applyStaticTranslations();
     
@@ -1209,8 +1211,6 @@ function setLanguage(lang) {
 
     // Re-render dynamic content only when movies are loaded
     if (movies.length > 0) {
-        populateChannels();
-        renderStreams();
         // Re-apply the active video info if a video is selected
         if (activeMovieId) {
             const activeMovie = movies.find(m => m.id === activeMovieId);
@@ -1222,6 +1222,36 @@ function setLanguage(lang) {
         }
         updatePlaylistButtonState();
     }
+
+    // Se um contentLang foi explicitamente passado (clique numa bandeira),
+    // também atualiza o filtro de conteúdo. Chamadas de restauração de
+    // estado (no carregamento da página) não passam contentLang, então só
+    // traduzem o texto, sem mexer no catálogo exibido.
+    if (contentLang !== undefined) {
+        applyContentLanguageFilter(contentLang);
+    } else {
+        // Mesmo sem mudar o filtro, atualiza o destaque visual das bandeiras
+        // (pela linguagem de CONTEÚDO atual, não pela do texto).
+        highlightActiveFlag();
+    }
+}
+
+// Aplica o filtro de idioma do catálogo e refaz a busca na API.
+function applyContentLanguageFilter(contentLang) {
+    currentContentLang = contentLang;
+    localStorage.setItem('lunera_content_lang', contentLang);
+    highlightActiveFlag();
+    currentPage = 1;
+    populateChannels();
+    renderStreams();
+}
+
+// Destaca a bandeira cujo filtro de conteúdo bate com o estado atual.
+function highlightActiveFlag() {
+    document.querySelectorAll('.flag-btn').forEach(btn => {
+        const btnContentLang = btn.dataset.contentLang || btn.dataset.lang;
+        btn.classList.toggle('active', btnContentLang === currentContentLang);
+    });
 }
 
 // Categorization helper based on terms in title or channel
@@ -1332,6 +1362,7 @@ async function buscarFilmesNaAPI() {
     if (currentChannel !== 'all') params.set('canal_id', currentChannel);
     if (currentCategory !== 'all') params.set('categoria', currentCategory);
     if (currentSort !== 'original') params.set('idioma', currentSort);
+    if (currentContentLang && currentContentLang !== 'all') params.set('lingua', currentContentLang);
     params.set('pagina', currentPage);
 
     const res = await fetch(`${API_BASE}/api/filmes?${params.toString()}`);
@@ -1982,14 +2013,18 @@ function setupLanguageSelector() {
         languageSelector.addEventListener('click', (e) => {
             const flagBtn = e.target.closest('.flag-btn');
             if (flagBtn && flagBtn.dataset.lang) {
-                setLanguage(flagBtn.dataset.lang);
+                const contentLang = flagBtn.dataset.contentLang || flagBtn.dataset.lang;
+                setLanguage(flagBtn.dataset.lang, contentLang);
             }
         });
     }
     // Listener direto em cada botão (garante funcionamento mesmo sem bubbling)
     document.querySelectorAll('.flag-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            if (btn.dataset.lang) setLanguage(btn.dataset.lang);
+            if (btn.dataset.lang) {
+                const contentLang = btn.dataset.contentLang || btn.dataset.lang;
+                setLanguage(btn.dataset.lang, contentLang);
+            }
         });
     });
 }
@@ -2001,13 +2036,15 @@ document.addEventListener('DOMContentLoaded', () => {
     setupLanguageSelector();
     loadVisitorCount();
     
-    // Restore saved language (apply after initApp so elements exist)
+    // Restore saved UI text language (texto do site), sem mexer no filtro
+    // de conteúdo — initApp() já carregou o catálogo respeitando
+    // currentContentLang salvo no localStorage.
     if (currentLang && currentLang !== 'pt') {
-        setLanguage(currentLang);
+        setLanguage(currentLang); // sem contentLang: só traduz o texto
     } else {
-        // Even for PT, set flag as active and apply static translations
-        document.querySelectorAll('.flag-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === 'pt');
-        });
+        applyStaticTranslations();
     }
+    // Destaca a bandeira correspondente ao filtro de conteúdo atual
+    // ('all' por padrão -> nenhuma bandeira específica, mostra tudo).
+    highlightActiveFlag();
 });
